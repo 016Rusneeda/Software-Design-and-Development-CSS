@@ -1035,12 +1035,158 @@ blockquote {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/layout-grid.css">
+</head>
+<body>
+    <div class="product-grid">
+        <!-- สินค้าชิ้นที่ 1 -->
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('/images/products/xv.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">ชาเย็นแต่ไม่เย็นชา</h3>
+                <div class="product-price">฿55</div>
+                <p class="product-description">
+                    ชาใต้ที่ส่งตรงจากใต้ กลิ่นหอมจากชาเข้มๆ รสชาติหวานเข้มกลมกลม ดื่มวันนี้นอนอีกทีสัปดาห์หน้า
+                </p>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- สินค้าชิ้นที่ 2 -->
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('/images/products/pro-two.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">ชาเขียว The Hulk</h3>
+                <div class="product-price">฿55</div>
+                <p class="product-description">
+                    ชาเขียวที่เขียวคล้ายเจ้ายักษ์นามThe Hulk รสชาติเข้มข้นหอมเหมือนอยู่ในไร่ชา 
+                </p>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+        <!-- สินค้าชิ้นที่ 3 -->
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('/images/products/pro-three.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">โกโก้วา โกชีพีอ๊อดซึมนิดา</h3>
+                <div class="product-price">฿50</div>
+                <p class="product-description">
+                    โกโก้นำเข้าจากแอฟริกา รสชาติหวานมันกลมกล่อมเข้มข้มสะใจ  
+                </p>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+        <!-- สินค้าชิ้นที่ 4 -->
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('/images/products/pro-four.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">ลาตง ลาเต้</h3>
+                <div class="product-price">฿60</div>
+                <p class="product-description">
+                    กาแฟอาราบิก้าแท้ผสมนมสด(สดมากเพราะคั่นจากแม่วัวแก้วต่อแก้ว) รสชาติเข้มข้นหวานหอมกลิ่นกาแฟอาราบิก้าจากดอยเชียงราย
+                </p>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- เพิ่มสินค้าอื่นๆ ตามต้องการ -->
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+.body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100;
+    height: 200px;
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-details {
+    padding: 15px;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.product-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![image](https://github.com/user-attachments/assets/64cefc5f-aa35-4603-889a-d11a6a85c33e)
+
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
