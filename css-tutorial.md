@@ -392,9 +392,144 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/cardd.css">
+</head>
+<body>
+    <!--สินค้าที่ 1-->
+    <div class="product-card">
+        <div class="product-image-one"></div>
+        <div class="product-info">
+            <h2 class="product-title">ชาเย็นแต่ไม่เย็นชา</h2>
+            <p class="product-price">฿55</p>
+            <p class="product-description">
+                ชาใต้ที่ส่งตรงจากใต้ กลิ่นหอมจากชาเข้มๆ รสชาติหวานเข้มกลมกลม ดื่มวันนี้นอนอีกทีสัปดาห์หน้า
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+    <!--สินค้าที่ 2-->
+    <div class="product-card">
+        <div class="product-image-two"></div>
+        <div class="product-info">
+            <h2 class="product-title">ชาเขียว The Hulk</h2>
+            <p class="product-price">฿55</p>
+            <p class="product-description">
+                ชาเขียวที่เขียวคล้ายเจ้ายักษ์นามThe Hulk รสชาติเข้มข้นหอมเหมือนอยู่ในไร่ชา 
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+    <!--สินค้าที่ 3-->
+    <div class="product-card">
+        <div class="product-image-three"></div>
+        <div class="product-info">
+            <h2 class="product-title">โกโก้วา โกชีพีอ๊อดซึมนิดา</h2>
+            <p class="product-price">฿50</p>
+            <p class="product-description">
+                โกโก้นำเข้าจากแอฟริกา รสชาติหวานมันกลมกล่อมเข้มข้มสะใจ  
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+    <!--สินค้าที่ 4-->
+    <div class="product-card">
+        <div class="product-image-four"></div>
+        <div class="product-info">
+            <h2 class="product-title">ลาตง ลาเต้ </h2>
+            <p class="product-price">฿60</p>
+            <p class="product-description">
+                กาแฟอาราบิก้าแท้ผสมนมสด(สดมากเพราะคั่นจากแม่วัวแก้วต่อแก้ว) รสชาติเข้มข้นหวานหอมกลิ่นกาแฟอาราบิก้าจากดอยเชียงราย
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+</body>
+</html>
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+```css
+.product-card {
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+.product-image-one {
+    width: 100%;
+    height: 300px;
+    background-image: url('/images/products/pro-one.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.product-image-two {
+    width: 100%;
+    height: 300px;
+    background-image: url('/images/products/pro-two.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.product-image-three {
+    width: 100%;
+    height: 300px;
+    background-image: url('/images/products/pro-three.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.product-image-four {
+    width: 100%;
+    height: 300px;
+    background-image: url('/images/products/pro-four.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: #007bff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.product-button {
+    display: block;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.product-button:hover {
+    background: linear-gradient(to right, #0056b3, #003980);
+}
+```
+[![สกรีนช็อต 2025-02-12 013145](https://github.com/user-attachments/assets/048167ca-1576-4edd-bd87-88173a20b6fb)
+![สกรีนช็อต 2025-02-12 013224](https://github.com/user-attachments/assets/994e08e7-757a-4970-b0cd-a31c274c61b2)
+![สกรีนช็อต 2025-02-12 013242](https://github.com/user-attachments/assets/fa71fc79-6d00-436a-aa68-e04c9da44bd9)
+![สกรีนช็อต 2025-02-12 013308](https://github.com/user-attachments/assets/efe194b0-b402-4316-bab6-fc9204010ff8)
+]
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
